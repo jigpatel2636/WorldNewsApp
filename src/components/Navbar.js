@@ -3,19 +3,8 @@ import PropTypes from 'prop-types'
 import {
   Link
 } from "react-router-dom";
-export class Navbar extends Component {
-  static defaultProps = {
-    country: 'us',
-    pageSize: 8,
-    category: 'general'
-  }
-  static propTypes = {
-    country: PropTypes.string,
-    pageSize: PropTypes.number,
-    category: PropTypes.string
-  }
 
-  render() {
+const Navbar = () => {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -42,7 +31,5 @@ export class Navbar extends Component {
     </nav>
     </div> 
     )
-  }
 }
-
 export default Navbar

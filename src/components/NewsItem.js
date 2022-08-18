@@ -1,16 +1,9 @@
 import React, { Component } from "react";
 
-export class NewsItem extends Component {
-  render() {
-    let {
-      title,
-      description,
-      imageUrl,
-      newsUrl,
-      author,
-      date,
-      source,
-    } = this.props;
+const NewsItem = (props) =>{
+
+    let {title,description,imageUrl,newsUrl,author,date,source} = props;
+
     return (
       <div className="my-3">
         <div className="card">
@@ -20,19 +13,13 @@ export class NewsItem extends Component {
               justifyContent: "flex-end",
               position: "absolute",
               right: 0,
-            }}
-          >
+            }}>
             <span className="badge rounded-pill bg-danger">{source}</span>
           </div>
           <img
-            src={
-              !imageUrl
-                ? "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/1be15e2a67cc215ec2d37365e33ae11e.jpg"
-                : imageUrl
-            }
+            src={!imageUrl ? "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/1be15e2a67cc215ec2d37365e33ae11e.jpg": imageUrl}
             className="card-img-top"
-            alt="..."
-          />
+            alt="..." />
           <div className="card-body">
             <h5 className="card-title">{title} </h5>
             <p className="card-text">{description}</p>
@@ -56,7 +43,6 @@ export class NewsItem extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default NewsItem;
