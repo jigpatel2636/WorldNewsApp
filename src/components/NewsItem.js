@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const NewsItem = (props) =>{
 
@@ -23,14 +23,14 @@ const NewsItem = (props) =>{
           <div className="card-body">
             <h5 className="card-title">{title} </h5>
             <p className="card-text">{description}</p>
-            <p class="card-text">
+            <p className="card-text">
               <small className="text-muted">
                 By {!author ? "unknown" : author} on{" "}
                 {new Date(date).toGMTString()}
               </small>
             </p>
             <a
-              rel="noreferer"
+              rel="noopener noreferrer"
               href={newsUrl}
               target="_blank"
               btn="true"
